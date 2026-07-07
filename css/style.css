@@ -11,14 +11,41 @@ body{
 }
 .card{
     margin: 40px;
-    padding: 20px;
+    padding: 30px 50px 70px 50px;
     background: #1d228f;
     border-radius: 12px;
+    max-width:500px;
+    width:90%;
+    justify-content: flex-start;
 }
 .task{
-    margin: 20px;
+    margin: 12px 0;
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: flex-start;
+}
+.grandtitle{
+    text-align: center;
+    background: rgb(100, 100, 100);
+    border-radius: 12px;
+    gap: 5px;
+}
+.daymiss{
+    text-align: center;
+}
+.welcome{
+    font-size: 20px;
+}
+.grandtitle{
+    padding: 20px;
+}
+.title{
+    margin-bottom: 5px;
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+}
+header h2{
+    margin-bottom: 0;
 }
