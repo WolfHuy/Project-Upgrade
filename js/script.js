@@ -8,12 +8,25 @@ let vocabCheckbox = document.querySelector("#vocab");
 vocabCheckbox.addEventListener("change", function() {
     console.log("Vocabulary checkbox changed!");
 });
-let missionTitle = document.querySelector(".daymiss");
-vocabCheckbox.addEventListener("change", function() {
-    if (vocabCheckbox.checked) {
-        missionTitle.textContent = "Today's Mission: ✅";
+let gramCheckbox = document.querySelector("#gram");
+let listCheckbox = document.querySelector("#list");
+let wriCheckbox = document.querySelector("#wri");
+let progress = document.querySelector(".progress");
+console.log(progress.textContent);  
+let checkboxes = document.querySelectorAll("input");
+console.log(checkboxes);
+for (let i = 0; i < 4; i++) {
+    console.log(checkboxes[i].checked);
+}
+function updateProgress() {
+    let completed = 0;
+for (let i = 0; i < 4; i++) {
+    if (checkboxes[i].checked) {
+        completed++;
     }
-    else {
-        missionTitle.textContent = "Today's Mission: ";
-    }
-});
+}
+progress.textContent = `Progress ${completed}/${checkboxes.length}`;
+}
+for (let i = 0; i < 4; i++) {
+    checkboxes[i].addEventListener("change", updateProgress);
+}
